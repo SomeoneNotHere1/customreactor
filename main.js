@@ -2189,10 +2189,39 @@ function drawFieldSlot(x,y,id){
 	 box_area.y2=y+btnWidth
 	if(is_mouse_in_area()){
 		//alert("Current ID: "+id)
-   	    var C = coords;
-   	    C[0] = 0; 
-   	    C[1] = 0
-					mob[id].texture=gameInfo.placing
+   	var C = coords;
+   	C[0] = 0; 
+   	C[1] = 0
+		if(gameInfo.placing=="movything.png" || gameInfo.placing=="convRight.png"|| gameInfo.placing=="convUp.png"|| gameInfo.placing=="convDown.png"|| gameInfo.placing=="convLeft.png"){
+			if(gameInfo.money>=9){
+				gameInfo.money-=10
+				mob[id].texture=gameInfo.placing
+			}
+		}
+		if(gameInfo.placing=="generator.png" && gameInfo.money>=50){
+			gameInfo.money-=50
+				mob[id].texture=gameInfo.placing
+		}
+		if(gameInfo.placing=="seller.png" && gameInfo.money>=10){
+			gameInfo.money-=10
+				mob[id].texture=gameInfo.placing
+		}
+		if(gameInfo.placing=="upgraderblue.png" && gameInfo.money>=100){
+			gameInfo.money-=100
+				mob[id].texture=gameInfo.placing
+		}
+		if(gameInfo.placing=="upgraderred.png" && gameInfo.money>=500){
+			gameInfo.money-=500
+				mob[id].texture=gameInfo.placing
+		}
+		if(gameInfo.placing=="upgraderpurple.png" && gameInfo.money>=2000){
+			gameInfo.money-=2000
+				mob[id].texture=gameInfo.placing
+		}
+		if(gameInfo.placing=="upgraderblack.png" && gameInfo.money>=8000){
+			gameInfo.money-=8000
+				mob[id].texture=gameInfo.placing
+		}
 	}
 }
 
