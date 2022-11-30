@@ -2880,8 +2880,8 @@ function gameLoop(timeStamp) {
 	 if(gameInfo.mode==="normal"){
     	playScreen();
     	context.fillStyle = '#FF0000';
-		for(let e=100;e<700;e+=51){//field
-			for(let i=300;i<1300;i+=51){
+		for(let e=100;e<700;e+=50){//field
+			for(let i=300;i<1300;i+=50){
     			drawFieldSlotFAKE(i, e,'floor.png')
     			drawFieldSlot(i, e,btnID);
 				
